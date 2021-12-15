@@ -1,29 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FaceMask Watcher</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js"></script>
-  </head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MaskOn Watcher</title>
+		<link rel="stylesheet" href="./static/styles/mainpage.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	</head>
+  	<body>
+      	<section>
+			<div class="homepage">
+				<img src="./static/images/people-in-mask.jpg" alt="">
+				<div class="header">
+					<div class="header_inner">
+						<div class="header-left">
+							<div class="logo_img">
+								<img src="./static/images/medical-mask.png" alt="">
+							</div>
+							<div class="header_logo">MaskOn</div>
+						</div>
+			
+						<nav class="nav">
+								<a data-page="home" class ="nav___link" href="#destination">Destination</a>
+								<a data-page="about" class="nav___link" href="#about">About</a>
+								<a data-page="portfolio" class="nav___link" href="#portfolio">Portfolio</a>
+								<a data-page="feacher" class="nav___link" href="#">Opportunities</a>
+								<a data-page="shortcoder" class="nav___link" href="#mask-detection">Mask detection</a>
+								<a data-page="contact" class="nav___link" href="#contacts">Contacts</a>
+						</nav>
+						<!-- <nav class="nav-mobile">
+							<div class="mobile-btn">
+								<img src="./images_main/" alt="">
+							</div>
+						</nav> -->
+					</div>
+					<div class="container">
+						<div class="intro_inner">
+							<h2 class="intro_subtittle">Unique and Modern System</h2>
+							<h1 = class="intro__tittle">Face Mask Detection Project</h1>
+							<div class="mainpage_text"><span>Life above all, life on the first place!</span></div>
+							<a class="btn" href="#mask-detection">Get start</a>
+						</div>
+					</div>
+				</div>
 
-  <body>
-    <div>
-        <img src="{{ url_for('video') }}" width="50%"/>
-    </div>
-    <div>
-      <p id="message"></p>
-    </div>
-    <script type="text/javascript" charset="utf-8">
-      namespace = '/app';
-      var socket = io(namespace),
-          messageContainer = document.querySelector('#message')
-      console.log('test')
-      socket.on('update_status', function(message) {
-        console.log(message)
-        messageContainer.innerText = message.status
-      });
-    </script>
+				<div class="bubbles">
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="introductory">
+				<div class="container">
+					<div class="introduction">
+						<div class="intro">
+							<div class="intro-img1"><img src="./static/images/mother.jpg" alt="picture guy in mask"></div>
+							<div class="intro-text">Proper use of masks requires strict adherence to general hygiene measures, including adequate coverage of the mouth and nose, avoiding gaps between the face and mask.</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section >
+			<div class="note">
+				<div class="container">
+					<div class="introduction">
+						<div class="intro">
+							<div class="intro-text">Deep learning into account the problem of infection young people to COVID-19, it was suggested that the need to use technologies to fix the proper wearing of personal protective equipment - masks, in educational institutions and places of concentration of children and adults.</span></div>
+							<div></div><div class="intro-img1"><img src="./static/images/guy-in-mask.png" alt="picture guy in mask"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="destination">
+			<div class="target">
+				<div class="container">
+					<div class="introduction">
+						<div class="intro">
+							<div class="intro-img"><img src="./static/images/mask-detect-children.png" alt=""></div>
+							<div class="intro-text">Our goal is to preserve the health of children through the use of machine learning techniques to distinguish whether a person wears a mask correctly.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="remark">
+				<div class="container">
+					<div class="introduction">
+						<div class="intro">
+							
+							<div class="intro-text">Therefore, this project takes into account not only the presence or absence of the mask, but also its proper use, the meaning of the mask and the ability to distinguish when it is well placed and when not.
+								<br> It offers detection and warning of many possible placement errors that would be difficult for a person to spot without this program.</div>
+								<div class="intro-img"><img src="./static/images/mask-options.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="portfolio">
+			<div class="container">
+				<div class="photos">
+					<div class="photo-tittle">Examples of the program results</div>
+					<div class="photo-block">
+						<div class="photo"><img src="./static/images/uncovered-face1.png" alt=""></div>
+						<div class="photo"><img src="./static/images/Untitled.png" alt=""></div>
+					</div>
+					<div class="photo-block">
+						<div class="photo"><img src="./static/images/children.png" alt=""></div>
+						<div class="photo"><img src="./static/images/covered.jpg" alt=""></div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="mask-detection" class="detection-container">
+			<div class="video-frame__container">
+				<img src="https://www.releasedanceacademy.com/wp-content/uploads/2020/07/placeholder-1.png" class="video-frame__placeholder">
+				<img src="{{ url_for('video') }}" class="video-frame"/>
+			</div>
+			<div class="controls-container">
+				<div class="start control">Run Detection</div>
+				<div class="stop control">Stop Detection</div>
+			</div>
+			<div class="status-container">
+				<div class="status"><span class="status-value"></span></div>
+			</div>
+		</section>
+		<section id="contacts" class="join-main-section">
+			<h1 class="join-text">
+				Keep your children
+				<span class="accent-text">in save. Join us!</span>
+			</h1>
+			<form class="join-form">
+				<div class="input-group">
+				<label>Name:</label>
+				<input type="text">
+				</div>
+				<div class="input-group">
+				<label>Email:</label>
+				<input type="email">
+				</div>
+				<div class="input-group">
+				<label>Password:</label>
+				<input type="password">
+				</div>
+				<div class="input-group">
+				<button type="submit" class="btn">Join Now</button>
+				</div>
+			</form>
+		</section>
+		<section class="footer-section">
+			<div class="container">
+				<footer class="main-footer">
+				
+					<nav class="footer-nav">
+					<ul>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#">+380(50)342-11-54</a></li>
+					</ul>
+					</nav>
+					<nav class="footer-nav">
+					<ul>
+						<li>
+						<a href="#" class="social-link">
+							<img src="./static/images/twitter.svg">
+							Twitter
+						</a>
+						</li>
+						<li>
+						<a href="#" class="social-link">
+							<img src="./static/images/facebook.svg">
+							Facebook
+						</a>
+						</li>
+					</ul>
+					<div class="footer-text"><span>All writes are protected</span></div>
+					</nav>
+
+				</footer>
+			</div>
+		</section>
+
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				var timerId = null;
+
+				$('.start').on('click', function(){
+					$('.video-frame').show();
+					$('.video-frame__placeholder').hide();
+					$('.start').hide();
+					$('.stop').show()
+					
+					$.get('/camera', function(data){
+						if(data && !data.status){
+							$('.video-frame').hide();
+							$('.video-frame__placeholder').show();
+							if(timerId){
+								clearTimeout(timerId)
+							}
+
+							alert('Please fix your camera device and reload the page')
+						}
+					});
+
+
+					timerId = setTimeout(function tick() {
+						$.get('/status', function(data){
+							console.log(data)
+							if(data && data.status){
+							$('.status-value').text('All students are with a mask')
+							$('.status-value').css('color', 'green')
+							}else{
+							$('.status-value').text('Some students aren\'t with a mask')
+							$('.status-value').css('color', 'red')
+							}
+						});
+
+						timerId = setTimeout(tick, 2000);
+					}, 2000);
+				})
+
+				$('.stop').on('click', function(){
+					if(timerId){
+						clearTimeout(timerId)
+					}
+
+					$('.video-frame').hide();
+					$('.video-frame__placeholder').show();
+					$('.stop').hide();
+					$('.start').show()
+				})
+			});
+		</script>
   </body>
 </html>
